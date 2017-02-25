@@ -1,0 +1,22 @@
+﻿    <md-sidenav-container fullscreen>
+        <md-sidenav #sidebar mode="over" [opened]="false" color="primary" fullscreen>
+            <md-nav-list color="primary">
+                <a md-list-item routerLink="search">Search</a>
+                <a md-list-item routerLink="movies">Movies</a>
+                <a md-list-item routerLink="actors">Actors</a>
+            </md-nav-list>
+        </md-sidenav>
+        <md-toolbar color="primary">
+            <button md-icon-button (click)="sidebar.open()">
+                <md-icon>menu</md-icon>
+                <span>Movies App</span>
+            </button>
+        </md-toolbar>
+        <div class="main-content flex-container" fxLayout="column">
+            <router-outlet>
+
+            </router-outlet>
+        </div>
+    </md-sidenav-container>  
+
+

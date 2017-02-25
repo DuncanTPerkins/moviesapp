@@ -1,0 +1,21 @@
+export class OmdbMovie{
+    public Title: string;
+    public Year: string;
+    public Rated: string;
+    public Released: string;
+    public Genre: string;
+    public Directory: string;
+    public Writer: string; 
+    public Actors: string;
+    public Plot: string;
+    public Language: string;
+    public Country: string;
+    public Awards: string;
+    public Poster: string;
+    public Metascore: number;
+    public ImdbRating: string;
+    public ImdbVotes: string;
+    public ImdbId: string;
+    public Type: string;
+    public Response: string;
+}

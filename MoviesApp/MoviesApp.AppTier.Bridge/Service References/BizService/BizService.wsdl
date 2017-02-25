@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BizService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57116/BizService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57116/BizService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57116/BizService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MoviesApp.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBizService_GetActorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorById" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetActorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllActors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActors" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllActors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByName" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActor" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetActorsByString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorsByString" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetActorsByString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorsByStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetMovieById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieById" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetMovieById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovies" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetActorTagById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorTagById" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetActorTagById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorTagByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllActorTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorTags" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllActorTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateActorTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorTag" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateActorTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_UpdateActorTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActorTag" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_UpdateActorTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActorTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_DeleteActorTagRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorTagRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_DeleteActorTagRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorTagRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetMovieTagById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieTagById" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetMovieTagById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieTagByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByMovie" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetByMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllMovieTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovieTags" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_GetAllMovieTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovieTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateMovieTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieTag" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_CreateMovieTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_UpdateMovieTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieTag" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_UpdateMovieTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_DeleteMovieTagRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieTagRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IBizService_DeleteMovieTagRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieTagRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBizService">
+    <wsdl:operation name="GetActorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetActorById" message="tns:IBizService_GetActorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetActorByIdResponse" message="tns:IBizService_GetActorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetAllActors" message="tns:IBizService_GetAllActors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetAllActorsResponse" message="tns:IBizService_GetAllActors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetByName" message="tns:IBizService_GetByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetByNameResponse" message="tns:IBizService_GetByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/CreateActor" message="tns:IBizService_CreateActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/CreateActorResponse" message="tns:IBizService_CreateActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActorsByString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetActorsByString" message="tns:IBizService_GetActorsByString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetActorsByStringResponse" message="tns:IBizService_GetActorsByString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetMovieById" message="tns:IBizService_GetMovieById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetMovieByIdResponse" message="tns:IBizService_GetMovieById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetAllMovies" message="tns:IBizService_GetAllMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetAllMoviesResponse" message="tns:IBizService_GetAllMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetByTitle" message="tns:IBizService_GetByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetByTitleResponse" message="tns:IBizService_GetByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/CreateMovie" message="tns:IBizService_CreateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/CreateMovieResponse" message="tns:IBizService_CreateMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActorTagById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetActorTagById" message="tns:IBizService_GetActorTagById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetActorTagByIdResponse" message="tns:IBizService_GetActorTagById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActorTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetAllActorTags" message="tns:IBizService_GetAllActorTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetAllActorTagsResponse" message="tns:IBizService_GetAllActorTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateActorTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/CreateActorTag" message="tns:IBizService_CreateActorTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/CreateActorTagResponse" message="tns:IBizService_CreateActorTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActorTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/UpdateActorTag" message="tns:IBizService_UpdateActorTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/UpdateActorTagResponse" message="tns:IBizService_UpdateActorTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorTagRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/DeleteActorTagRelationship" message="tns:IBizService_DeleteActorTagRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/DeleteActorTagRelationshipResponse" message="tns:IBizService_DeleteActorTagRelationship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieTagById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetMovieTagById" message="tns:IBizService_GetMovieTagById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetMovieTagByIdResponse" message="tns:IBizService_GetMovieTagById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetByMovie" message="tns:IBizService_GetByMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetByMovieResponse" message="tns:IBizService_GetByMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovieTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/GetAllMovieTags" message="tns:IBizService_GetAllMovieTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/GetAllMovieTagsResponse" message="tns:IBizService_GetAllMovieTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/CreateMovieTag" message="tns:IBizService_CreateMovieTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/CreateMovieTagResponse" message="tns:IBizService_CreateMovieTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovieTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/UpdateMovieTag" message="tns:IBizService_UpdateMovieTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/UpdateMovieTagResponse" message="tns:IBizService_UpdateMovieTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieTagRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBizService/DeleteMovieTagRelationship" message="tns:IBizService_DeleteMovieTagRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBizService/DeleteMovieTagRelationshipResponse" message="tns:IBizService_DeleteMovieTagRelationship_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBizService" type="tns:IBizService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActorById">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetActorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetAllActors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByName">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <soap:operation soapAction="http://tempuri.org/IBizService/CreateActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActorsByString">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetActorsByString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetMovieById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetAllMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByTitle">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <soap:operation soapAction="http://tempuri.org/IBizService/CreateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActorTagById">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetActorTagById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActorTags">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetAllActorTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateActorTag">
+      <soap:operation soapAction="http://tempuri.org/IBizService/CreateActorTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActorTag">
+      <soap:operation soapAction="http://tempuri.org/IBizService/UpdateActorTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorTagRelationship">
+      <soap:operation soapAction="http://tempuri.org/IBizService/DeleteActorTagRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieTagById">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetMovieTagById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByMovie">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetByMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovieTags">
+      <soap:operation soapAction="http://tempuri.org/IBizService/GetAllMovieTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieTag">
+      <soap:operation soapAction="http://tempuri.org/IBizService/CreateMovieTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovieTag">
+      <soap:operation soapAction="http://tempuri.org/IBizService/UpdateMovieTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieTagRelationship">
+      <soap:operation soapAction="http://tempuri.org/IBizService/DeleteMovieTagRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BizService">
+    <wsdl:port name="BasicHttpBinding_IBizService" binding="tns:BasicHttpBinding_IBizService">
+      <soap:address location="http://localhost:57116/BizService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

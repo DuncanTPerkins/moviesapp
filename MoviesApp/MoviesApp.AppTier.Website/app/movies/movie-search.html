@@ -1,0 +1,13 @@
+﻿<div class="autocomplete flex-container" fxLayoutAlign="center end">
+        <md-input-container>
+            <input type="text" mdInput [formControl]="SearchQuery" [mdAutocomplete]="auto" />
+            <md-autocomplete #auto="mdAutocomplete" class="autocomplete">
+                <md-option *ngFor="let result of FilteredResult" [routerLink]="['/movies', result.imdbID]">
+                    <img *ngIf="result.Poster" src="{{result.Poster}}" alt="Poster" />
+                    <md-spinner *ngIf="!result.Poster" mode="indeterminate" color="accent">
+                    </md-spinner>
+                    {{result.Title}}
+                </md-option>
+            </md-autocomplete>
+        </md-input-container>  
+</div>

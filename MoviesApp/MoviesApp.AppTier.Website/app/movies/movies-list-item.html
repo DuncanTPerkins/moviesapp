@@ -1,0 +1,61 @@
+﻿<div class="movie-list-item flex-container" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center start" >
+    <div class="card-holder flex-item" fxFlex="33">
+        <md-card class="movie-header" fxFlex="60%" fxFlex.md="70%" fxFlex.xs="40%" fxFlex.sm="30" >
+            <md-card-header>
+                <md-card-title>
+                    {{movie?.Title}}
+                </md-card-title>
+                <md-card-subtitle>
+                    {{movie?.Released | date: 'longDate'}}
+                </md-card-subtitle>
+            </md-card-header>
+            <img *ngIf="movie" md-card-image src="{{movie?.Poster}}" />
+            <md-spinner *ngIf="!movie || movie.imdbid == ''" mode="indeterminate" color="accent"> </md-spinner>
+            <md-card-content>
+                <p>
+                    {{movie?.Plot}}
+                </p>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>Add to Favorites</button>
+                <button md-button> Mark as Watched</button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div class="tabs flex-item" fxFlex="67" fxFlex.sm="80%">
+        <md-tab-group class="max-width">
+            <md-tab label="Movie Details" class="max-width">
+                <md-list>
+                    <md-list-item> Rated: {{movie?.Rated}}</md-list-item>
+                    <md-list-item> Genre: {{movie?.Genre}} </md-list-item>
+                    <md-list-item> Director: {{movie?.Director}} </md-list-item>
+                    <md-list-item> Writer: {{movie?.Writer}} </md-list-item>
+                    <md-list-item> Language: {{movie?.Language}} </md-list-item>
+                    <md-list-item> Country: {{ movie?.Country}}</md-list-item>
+                    <md-list-item> Awards: {{ movie?.Awards }}</md-list-item>
+                    <md-list-item> Metascore: {{ movie?.Metascore }}</md-list-item>
+                    <md-list-item> IMDB Rating: {{movie?.ImdbRating }}</md-list-item>
+                    <md-list-item> IMDB Votes: {{ movie?.ImdbVotes }}</md-list-item>
+                </md-list>
+            </md-tab>
+            <md-tab label="Tags" class="max-width">
+                <md-slide-toggle color="warn" [formControl]="deleteswitch">
+                    Delete
+                </md-slide-toggle>
+                <div class="tags">
+                    <a md-raised-button color="{{ this.buttoncolor }}" (click)="TagClick(tag)"class="chip" *ngFor="let tag of movie?.MovieTags">
+                        {{tag?.TagDescription}}
+                    </a>
+                </div><br/>
+                <md-input-container><input [formControl]="taginput" type="text" placeholder="Add Tag" mdInput /></md-input-container>
+                <button md-mini-fab [(ngModel)]="tagfab" (click)="CreateTag()"><md-icon>add</md-icon></button>
+            </md-tab>
+            <md-tab label="Actors" class="max-width">
+                    <a md-raised-button *ngFor="let actor of movie?.Actors" class="chip" color="primary" [routerLink]="['/movies', actor.ActorId]">
+                        {{actor?.Name}}
+                    </a>
+            </md-tab>
+        </md-tab-group>
+    </div>
+
+</div>

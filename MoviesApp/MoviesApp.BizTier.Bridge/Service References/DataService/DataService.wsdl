@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60073/DataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60073/DataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60073/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MoviesApp.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataService_GetActorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetActorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllActors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActors" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllActors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByName" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActor" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMovieById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMovieById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovies" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetActorTagById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorTagById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetActorTagById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorTagByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllActorTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorTags" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllActorTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateActorTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorTag" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateActorTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateActorTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActorTag" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateActorTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActorTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteActorTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorTag" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteActorTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMovieTagById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieTagById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMovieTagById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieTagByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByMovie" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetByMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllMovieTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovieTags" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetAllMovieTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovieTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateMovieTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieTag" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateMovieTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateMovieTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieTag" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateMovieTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteMovieTagRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieTagRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteMovieTagRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieTagRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataService">
+    <wsdl:operation name="GetActorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetActorById" message="tns:IDataService_GetActorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetActorByIdResponse" message="tns:IDataService_GetActorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetAllActors" message="tns:IDataService_GetAllActors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetAllActorsResponse" message="tns:IDataService_GetAllActors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetByName" message="tns:IDataService_GetByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetByNameResponse" message="tns:IDataService_GetByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateActor" message="tns:IDataService_CreateActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateActorResponse" message="tns:IDataService_CreateActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetMovieById" message="tns:IDataService_GetMovieById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetMovieByIdResponse" message="tns:IDataService_GetMovieById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetAllMovies" message="tns:IDataService_GetAllMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetAllMoviesResponse" message="tns:IDataService_GetAllMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetByTitle" message="tns:IDataService_GetByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetByTitleResponse" message="tns:IDataService_GetByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateMovie" message="tns:IDataService_CreateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateMovieResponse" message="tns:IDataService_CreateMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActorTagById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetActorTagById" message="tns:IDataService_GetActorTagById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetActorTagByIdResponse" message="tns:IDataService_GetActorTagById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActorTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetAllActorTags" message="tns:IDataService_GetAllActorTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetAllActorTagsResponse" message="tns:IDataService_GetAllActorTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateActorTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateActorTag" message="tns:IDataService_CreateActorTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateActorTagResponse" message="tns:IDataService_CreateActorTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActorTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateActorTag" message="tns:IDataService_UpdateActorTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateActorTagResponse" message="tns:IDataService_UpdateActorTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteActorTag" message="tns:IDataService_DeleteActorTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteActorTagResponse" message="tns:IDataService_DeleteActorTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieTagById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetMovieTagById" message="tns:IDataService_GetMovieTagById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetMovieTagByIdResponse" message="tns:IDataService_GetMovieTagById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetByMovie" message="tns:IDataService_GetByMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetByMovieResponse" message="tns:IDataService_GetByMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovieTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetAllMovieTags" message="tns:IDataService_GetAllMovieTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetAllMovieTagsResponse" message="tns:IDataService_GetAllMovieTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateMovieTag" message="tns:IDataService_CreateMovieTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateMovieTagResponse" message="tns:IDataService_CreateMovieTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovieTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateMovieTag" message="tns:IDataService_UpdateMovieTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateMovieTagResponse" message="tns:IDataService_UpdateMovieTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieTagRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteMovieTagRelationship" message="tns:IDataService_DeleteMovieTagRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteMovieTagRelationshipResponse" message="tns:IDataService_DeleteMovieTagRelationship_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActorById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetActorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetAllActors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByName">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <soap:operation soapAction="http://tempuri.org/IDataService/CreateActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetMovieById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetAllMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByTitle">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <soap:operation soapAction="http://tempuri.org/IDataService/CreateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActorTagById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetActorTagById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActorTags">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetAllActorTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateActorTag">
+      <soap:operation soapAction="http://tempuri.org/IDataService/CreateActorTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActorTag">
+      <soap:operation soapAction="http://tempuri.org/IDataService/UpdateActorTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorTag">
+      <soap:operation soapAction="http://tempuri.org/IDataService/DeleteActorTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieTagById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetMovieTagById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByMovie">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetByMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovieTags">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetAllMovieTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieTag">
+      <soap:operation soapAction="http://tempuri.org/IDataService/CreateMovieTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovieTag">
+      <soap:operation soapAction="http://tempuri.org/IDataService/UpdateMovieTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieTagRelationship">
+      <soap:operation soapAction="http://tempuri.org/IDataService/DeleteMovieTagRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataService">
+    <wsdl:port name="BasicHttpBinding_IDataService" binding="tns:BasicHttpBinding_IDataService">
+      <soap:address location="http://localhost:60073/DataService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

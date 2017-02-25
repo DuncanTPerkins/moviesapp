@@ -1,0 +1,45 @@
+﻿CREATE PROCEDURE [dbo].[usp_UpdMovie]
+	@MovieID char(9),
+	@Title varchar(150),
+	@Year datetime2,
+	@Rated varchar(5),
+	@Released datetime,
+	@Genre varchar(50),
+	@Director varchar(50),
+	@Writer varchar(50),
+	@Plot varchar(500),
+	@Language varchar(50),
+	@Country varchar(10),
+	@Awards varchar(250),
+	@Poster varchar(500),
+	@Metascore int,
+	@ImdbRating varchar(4),
+	@ImdbVotes varchar(20),
+	@Favorited int,
+	@Watched int,
+	@Type varchar(10),
+	@Response varchar(10)
+AS
+	UPDATE Movies
+	SET Title = @Title, 
+	Year = @Year, 
+	Rated = @Rated, 
+	Released = @Released, 
+	Genre = @Genre, 
+	Director = @Director, 
+	Writer = @Writer, 
+	Plot = @Plot, 
+	Language = @Language, 
+	Country = @Country, 
+	Awards = @Awards, 
+	Poster = @Poster, 
+	Metascore = @Metascore, 
+	ImdbRating = @ImdbRating, 
+	ImdbVotes = @ImdbVotes, 
+	Type = @Type,
+	Favorited = @Favorited,
+	Watched = @Watched, 
+	Response = @Response
+
+	WHERE MovieID = @MovieID
+RETURN 0

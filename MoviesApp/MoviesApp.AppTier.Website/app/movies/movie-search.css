@@ -1,0 +1,33 @@
+﻿body {
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+md-spinner {
+    height: 100%;
+    width: auto;
+}
+md-input-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.autocomplete {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.cdk-overlay-pane { 
+box-sizing: border-box; 
+width: 1000px;
+    min-width: 500px;
+} 
+
+.mat-autocomplete-panel {
+    min-width: 600px !important;
+
+}

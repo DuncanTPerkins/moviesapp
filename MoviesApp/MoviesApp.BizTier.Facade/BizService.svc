@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MoviesApp.BizTier.Facade.BizService" Factory="MoviesApp.BizTier.Facade.WcfServiceFactory" %>

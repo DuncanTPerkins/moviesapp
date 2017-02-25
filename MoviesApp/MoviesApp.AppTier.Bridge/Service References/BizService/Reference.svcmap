@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ccd2eb4d-7d1a-4e4e-9b3e-74b327199a94" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="MoviesApp.Models" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57116/BizService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BizService.xsd" MetadataType="Schema" ID="e6b58ab6-110c-486a-a51e-022430517240" SourceId="1" SourceUrl="http://localhost:57116/BizService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BizService1.xsd" MetadataType="Schema" ID="99d7d269-864c-46b3-8ade-851cf3851beb" SourceId="1" SourceUrl="http://localhost:57116/BizService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BizService2.xsd" MetadataType="Schema" ID="5b64effb-3d9d-4a01-8298-62f966c9cd23" SourceId="1" SourceUrl="http://localhost:57116/BizService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BizService.wsdl" MetadataType="Wsdl" ID="282908a3-df20-4a4a-9815-530244ddaefd" SourceId="1" SourceUrl="http://localhost:57116/BizService.svc?wsdl" />
+    <MetadataFile FileName="BizService.disco" MetadataType="Disco" ID="8e85a58b-70c2-429e-bfc0-b637cab5aeaf" SourceId="1" SourceUrl="http://localhost:57116/BizService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
